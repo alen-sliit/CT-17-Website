@@ -1,0 +1,41 @@
+body{
+    background-color: #101010;
+    display: grid;
+    
+    color: white;
+}
+#left{
+    grid-column: 1;
+    align-self: center;
+    align-content: center;
+    margin-left: 30px;
+    width: 10px;
+}
+#content{
+    grid-column: 2;
+    background-color: #FFFFFF;
+    color: #262A41;
+    border-radius: 5%;
+}
+#user-details > img{
+    height: 72px;
+    width: 72px;
+    border-radius: 50%;
+}
+#user-details{
+    font-family: Poppins;
+}
+#user-name{
+    font-size: 30px;
+}
+#email{
+    opacity: 50%;
+    font-size: 17px;
+}
+#tabs{
+    font-size: 25px;
+    line-height: 50px;
+}
+ul{
+    list-style: none;
+}
