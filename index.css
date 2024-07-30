@@ -1,3 +1,8 @@
+a { 
+    color: inherit; 
+    text-decoration: none;
+} 
+
 body{
     background-color: #101010;
     display: grid;
@@ -43,6 +48,7 @@ body{
 }
 ul{
     list-style: none;
+    padding-left: 10px;
 }
 
 #content > *{
@@ -62,9 +68,18 @@ h2{
 #add-button{
     width: 24px;
     height: 24px;
-    background-image: url(./images/images.png);
+    background-image: url(./images/plus.png);
     background-size: cover;
     border-radius: 50%;
+    border: none;
+}
+#remove-button{
+    width: 24px;
+    height: 24px;
+    background-image: url(./images/minus.png);
+    background-size: cover;
+    border-radius: 50%;
+    border: none;
 }
 .options{
     opacity: 0.7;
@@ -101,10 +116,16 @@ input[type=radio]{
     height: 48px;
     grid-column-start: 2;
 }
-#monitor-part > hr{
-    width: 50%;
-    display: inline-block;
+
+hr{
+    display: block;
+    margin-left: 0;
+    width: 60%;
 }
+#adding-part > hr{
+    width: 100%;
+}  
+
 #medi-name-A,#medi-name-B,#medi-name-C{
     font-weight: bold;
 }
@@ -117,6 +138,17 @@ input[type=radio]{
 #status-C{
     color: yellow;
 }
+
+#tabs > ul > li {
+    text-decoration: none;
+    padding: 10px;
+    transition: color 0.3s ease-in-out;
+}
+
+#tabs > ul > li:hover {
+    color: gray; /* Color changes to red on hover */
+}
+
 @media screen and (max-width: 1255px) {
        #monitor-part{
         grid-column: 1;
@@ -124,7 +156,27 @@ input[type=radio]{
     }
     #content{
         grid-template-columns: auto;
-        
-    }}
+    }
+    #adding-part > hr{
+        width: 60%;
+    }
+}
+@media screen and (max-width: 850px) {
+    /* #left{
+        display: none;
+    } */
+    #content{
+        grid-column: 1;}
+    body{
+        grid-template-columns: auto;
+    }
+    #tabs > ul{
+        display: flex;
+        font-size: 15px;
+        gap: 5px;
+    }
+    
+}
+    
  
 

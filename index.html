@@ -9,13 +9,14 @@
 </head>
 <body><div id="left">
     <div id="user-details">
-        <img src="./images/Avatar .png" alt="user-image"><br>
+        <br><br>
+        <img src="./images/Avatar.png" alt="user-image"><br>
         <label id="user-name">SLIIT</label>
-        <div id="email">sliit@gmail.com</div><br><br><br>
+        <div id="email">sliit@gmail.com</div><br>
     </div>
     <div id = "tabs">
         <ul>
-            <li>Dashboard</li>
+            <li><a href="./index.html">Dashboard</a></li>
             <li>Personal info</li>
             <li>Wallet</li>
             <li>Summary</li>
@@ -28,8 +29,11 @@
         <h1>Dashboard</h1>
         <h2>Patient's Name</h2>
         <label id="h3">Schedule 
-        &emsp;&emsp;&emsp;&emsp; &emsp; &emsp;&emsp; &emsp; &ensp;</label>
+        &emsp;&emsp;&emsp;&emsp; &emsp; &emsp;&emsp; &ensp;</label>
+
+        <button id="remove-button"></button>
         <button id="add-button"></button>
+        
         <hr>
             <ul><div><form action=""><li>
                 <label class="h4">Medicine A &emsp; &emsp; &emsp; </label>
@@ -71,35 +75,43 @@
             <div id="monitor-part">
                 <h1 id="date">29 - July - 2024</h1>
                 <hr>
-                <div class="Medicine-status">
-                    <img src="./images/red-dot.png" alt="status A">
-                    <div>
-                    <label id="medi-name-A">Medicine A</label>
-                    &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; &emsp; &emsp;
-                    <label id="time-A">08:00</label><br>
-                    <label id="meal-mom">Before meal</label>
-                    <label id="status-A">missed</label>
-                </div><br><br>
-                </div>
-                <div class="Medicine-status">
-                    <img src="./images/green-dot.png" alt="status B">
-                    <div>
-                    <label id="medi-name-B">Medicine B</label>
-                    &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; &emsp; &emsp;
-                    <label id="time-B">&nbsp;10:00</label><br>
-                    <label id="meal-mom">Before meal</label>
-                    <label id="status-B">taken</label>
+                <ul><li>
+                    <div class="Medicine-status">
+                        <img src="./images/red-dot.png" alt="status A">
+                        <div>
+                        <label id="medi-name-A">Medicine A</label>
+                        &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; &emsp; &emsp;
+                        <label id="time-A">08:00</label><br>
+                        <label id="meal-mom">Before meal</label>
+                        <label id="status-A">missed</label>
                     </div><br><br>
-                </div>
-                <div class="Medicine-status">
-                    <img src="./images/yellow-dot .png" alt="status C">
-                    <div>
-                    <label id="medi-name-C">Medicine C </label>
-                    &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; &emsp; &emsp;
-                    <label id="time-C">16:00</label><br>
-                    <label id="meal-mom">Before meal</label>
-                    <label id="status-C">pending</label>
-                </div><br><br>
+                    </div>
+                </li>
+                <li>
+                    <div class="Medicine-status">
+                        <img src="./images/green-dot.png" alt="status B">
+                        <div>
+                        <label id="medi-name-B">Medicine B</label>
+                        &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; &emsp; &emsp;
+                        <label id="time-B">08:00</label><br>
+                        <label id="meal-mom">Before meal</label>
+                        <label id="status-B">taken</label>
+                    </div><br><br>
+                    </div>
+                </li>
+                <li>
+                    <div class="Medicine-status">
+                        <img src="./images/yellow-dot .png" alt="status C">
+                        <div>
+                        <label id="medi-name-C">Medicine C</label>
+                        &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; &emsp; &emsp;
+                        <label id="time-C">08:00</label><br>
+                        <label id="meal-mom">Before meal</label>
+                        <label id="status-C">pending</label>
+                    </div><br><br>
+                    </div>
+                </li></ul>
+                <br><br>
                 </div> 
             </div>     
     </div>
