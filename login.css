@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.main{
+    width: 100%;
+    height: 109vh;
+    background: linear-gradient(to right, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%),url(loginbackground.jpg);
+    background-size: cover;
+    
+}
+.title{
+    width: 200px;
+    height: 80px;
+    position: relative;
+    left: 640px;
+    top: 100px;
+    color: #FF7F00;
+    font-size: 40px;
+    font-family: Arial;
+}
+
+.title h3{
+    width: 400px;
+    height: 80px;
+    position: relative;
+    right: 20px;
+    color: black;
+    font-size: 20px;
+    font-family: Arial;
+
+}
+.title h4{
+    width: 200px;
+    height: 80px;
+    position: relative;
+    left: 70px;
+    color: white;
+    font-size: 40px;
+    font-family: Arial;
+
+}
+
+.form {
+    border: 3px solid #f1f1f1;
+    position: relative;
+    left: 480px;
+    top: 100px;
+  }
+  
+.form input[type=text], input[type=password] {
+    width: 30%;
+    padding: 12px;
+    margin: 8px;
+    font-size: medium;
+    display: inline-block;
+    border: 1px;
+    border-color: #f1f1f1;
+  }
+ 
+.form input[type=submit], button[type=button] {
+    background-color:white;
+    border-radius: 1opx;
+    border-color: black;
+    font: bold;
+    color: black;
+    width: 150px;
+    height: 30px;
+    position: relative;
+    left: 130px;
+  }
+  
+  
