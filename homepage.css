@@ -72,7 +72,7 @@
 }
 
 .ribbon button a:hover{
-    color: rgb(113, 42, 151);
+    color: aqua;
 }
 
 
@@ -106,14 +106,16 @@
     padding-top: 4%;
 }
 
-@media (max-width: 600px){
+
+        
+
+@media screen and (max-width: 300px) {
     .ribbon{
         width: 100%;  
     }
     .content{
         width: 100%;
     }
-        
 }
 
 
