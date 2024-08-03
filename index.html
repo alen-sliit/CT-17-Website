@@ -12,112 +12,110 @@
         <br><br>
         <img src="./images/Avatar.png" alt="user-image"><br>
         <label id="user-name">SLIIT</label>
-        <div id="email">sliit@gmail.com</div><br>
+        <label id="email">sliit@gmail.com</label><br>
     </div>
     <div id = "tabs">
         <ul>
             <li><a href="./index.html">Dashboard</a></li>
-            <li>Personal info</li>
-            <li>Wallet</li>
-            <li>Summary</li>
-            <li>Accounts</li>
-            <li>Settings</li> 
+            <li><a href="./personalinfo.html">Personal info</a></li>
         </ul>
-    </div></div>
-    <div id="content">
-        <div id="adding-part">
+    </div>
+</div>
+<div id="content">
+    <div id="adding-part">
         <h1>Dashboard</h1>
         <h2>Patient's Name</h2>
         <label id="h3">Schedule 
         &emsp;&emsp;&emsp;&emsp; &emsp; &emsp;&emsp; &ensp;</label>
-
+        
         <button id="remove-button"></button>
         <button id="add-button"></button>
-        
-        <hr>
-            <ul><div><form action=""><li>
-                <label class="h4">Medicine A &emsp; &emsp; &emsp; </label>
+    
+    <hr>
+        <ul><div><form action="">
+            <li>
+            <label class="h4">Medicine A &emsp; &emsp; &emsp; </label>
 
-                    <input type="time" id="reminder-time-A" name="reminder-time-A" required><br>
-                
-                    <input type="radio" id="before" name="meal-mom" value="Before">
+                <input type="time" id="reminder-time-A" name="reminder-time-A" required><br>
+            
+                <input type="radio" id="before" name="meal-mom" value="Before">
                     <label class="options">Before</label>
                     <input type="radio" id="after" name="meal-mom" value="After">
                     <label class="options">After &emsp; &emsp;<span>Meal</span></label><br>  
-                    
-                    <br>
-                    <input type="submit" value="Submit"><br><br>
-                    </li></div>
-                <div><li>
+                
+                <br>
+                <input type="button" value="Submit"><br><br>
+            </li></form></div>
+            <div><li><form action="">
                 <label class="h4">Medicine B &emsp; &emsp; &emsp; </label>
 
-                    <input type="time" id="reminder-time-B" name="reminder-time-B" required><br>
-                
-                    <input type="radio" id="before" name="meal-mom" value="Before">
+                <input type="time" id="reminder-time-B" name="reminder-time-B" required><br>
+            
+                <input type="radio" id="before" name="meal-mom" value="Before">
                     <label class="options">Before</label>
                     <input type="radio" id="after" name="meal-mom" value="After">
                     <label class="options">After &emsp; &emsp;<span>Meal</span></label><br>
-                    
-                    <br>
-                    <input type="submit" value="Submit"><br><br>
-                    </li></div>
-                <li><div>
-                <label class="h4">Medicine C &emsp; &emsp; &emsp; </label>
-                    <input type="time" id="reminder-time-B" name="reminder-time-C" required>
-                    <br>
-                    <input type="radio" id="before" name="meal-mom" value="Before">
+                
+                <br>
+                <input type="button" value="Submit"><br><br>
+                </form></li></div>
+            <li><div><form action="">
+            <label class="h4">Medicine C &emsp; &emsp; &emsp; </label>
+                <input type="time" id="reminder-time-B" name="reminder-time-C" required>
+                <br>
+                <input type="radio" id="before" name="meal-mom" value="Before">
                     <label class="options">Before</label>
                     <input type="radio" id="after" name="meal-mom" value="After">
                     <label class="options">After &emsp; &emsp;<span>Meal</span></label>
-                    <br><br>
-                    <input type="submit" value="Submit"><br><br>
-                    </li></ul></div>
-            <div id="monitor-part">
-                <h1 id="date">29 - July - 2024</h1>
-                <hr>
-                <ul><li>
-                    <div class="Medicine-status">
-                        <img src="./images/red-dot.png" alt="status A">
-                        <div>
+                <br><br>
+                <input type="button" value="Submit"><br><br>
+                </li></ul></form></div>
+        <div id="monitor-part">
+            <h1 id="date">29 - July - 2024</h1>
+            <hr>
+            <ul><li>
+                <div class="Medicine-status">
+                    <img src="./images/red-dot.png" alt="status A">
+                    <div>
                         <label id="medi-name-A">Medicine A</label>
-                        &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; &emsp; &emsp;
+                        &emsp; &emsp; &emsp;&emsp; &emsp; 
                         <label id="time-A">08:00</label><br>
                         <label id="meal-mom">Before meal</label>
                         <label id="status-A">missed</label>
                     </div><br><br>
-                    </div>
-                </li>
-                <li>
-                    <div class="Medicine-status">
-                        <img src="./images/green-dot.png" alt="status B">
-                        <div>
+                </div>
+            </li>
+            <li>
+                <div class="Medicine-status">
+                    <img src="./images/green-dot.png" alt="status B">
+                    <div>
                         <label id="medi-name-B">Medicine B</label>
-                        &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; &emsp; &emsp;
+                        &emsp; &emsp; &emsp;&emsp; &emsp; 
                         <label id="time-B">08:00</label><br>
                         <label id="meal-mom">Before meal</label>
                         <label id="status-B">taken</label>
                     </div><br><br>
-                    </div>
-                </li>
-                <li>
-                    <div class="Medicine-status">
-                        <img src="./images/yellow-dot .png" alt="status C">
-                        <div>
+                </div>
+            </li>
+            <li>
+                <div class="Medicine-status">
+                    <img src="./images/yellow-dot .png" alt="status C">
+                    <div>
                         <label id="medi-name-C">Medicine C</label>
-                        &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; &emsp; &emsp;
+                        &emsp;&emsp; &emsp;&emsp; &emsp; 
                         <label id="time-C">08:00</label><br>
                         <label id="meal-mom">Before meal</label>
                         <label id="status-C">pending</label>
                     </div><br><br>
-                    </div>
-                </li></ul>
-                <br><br>
-                </div> 
-            </div>     
-    </div>
+                </div>
+            </li></ul>
+            <br><br>
+            </div> 
+        </div>     
+</div>
 </div>
 
 
-    
+
 </body>
 </html>
