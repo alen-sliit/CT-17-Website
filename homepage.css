@@ -1,65 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "poppins";
+}
+
+.main{
+    display: grid;
+}
 .ribbon{
     width: 100%;
-    height: 20%;
     display: grid;
-    background-color: #c1c9cf;
-    grid-template-columns: min-content auto;
-    font-family: "Poppins";
+    padding-top: 2%;
+   
 }
 
 .ribbon h2{
     grid-column: 1;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    margin-left: 30px;
-    margin-right: 50px;
-    position: relative;
-    left: 10%;
-}
-
-.ribbon ul{
-    grid-column: 2;
-    align-self: center;
-    align-content: center;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    left: 15%;
+    right: 20%;
+}
+
+.ribbon ul{
+    grid-column: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    position: relative;
+    right: 5%; 
 }
 
 .ribbon ul li{
     list-style: none;
-    margin-left: 20%;
+    margin-left: 15%;
     
 }
 
 .ribbon ul li a{
     text-decoration: none;
-    color: black;
-    font-family: "poppins";
-    
+    color: black;    
 }
 
 .ribbon ul li a:hover{
     color: rgb(113, 42, 151);
 }
 
-.ribbon button{
+.ribbon #btn{
     grid-column: 3;
     background: black;
+    width: 120px;
+    height: 45px;
+    position: relative;
+    left: 50%;
     border: none;
-    border-radius: 50px;
-    font-size: medium;
+    outline: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
-    width: 20%;
-    height: 50%;
-    position: relative;
-    left: 60%;
-    top: 25%;
+    
 }
 
 .ribbon button a{
@@ -71,62 +74,47 @@
 .ribbon button a:hover{
     color: rgb(113, 42, 151);
 }
+
+
 .content{
-    display: grid;
-    grid-template-columns: 30% auto;
-    justify-content: center;
-    align-items: center;
-    font-style: "poppins";
-    position: relative;
-    margin-top: 2%;
+    text-align: center;
+    line-height: 1;
 }
+
 .content h3{
-    position: relative;
-    left: 20%;
-    top: 40%;
     font-size: small;
+    padding-top: 4%;
+    padding-bottom: 1%;
 }
+
 .content p{
-    grid-column: 1;
-    grid-row: 2;
     font-size:40px ;
-    position: relative;
-    position: relative;
-    left: 17%;   
-}
+}   
 
 .content p2{
-    grid-column: 1;
-    grid-row: 3;
-    position: relative;
-    left: 40%;
-    bottom: 60%;
-
     font-size: 40px;
-    background: linear-gradient(to right, #ef5350, #f48fb1, #7e57c2, #2196f3, #26c6da, #43a047, #eeff41, #f9a825, #ff5722);
+    background: linear-gradient(to right, #f48fb1, #7e57c2, #2196f3, #26c6da);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .content p1{
-    grid-column: 1;
-    grid-row: 3;
     font-size: 40px;
-    position: relative;
-    bottom: 60%;
-   
-
 }
+
 .content img{
-    grid-column: 1;
-    grid-row: 4;
-    
-    position: relative;
-    right: 15%;
+    padding-top: 4%;
 }
 
-
-
+@media (max-width: 600px){
+    .ribbon{
+        width: 100%;  
+    }
+    .content{
+        width: 100%;
+    }
+        
+}
 
 
 
