@@ -5,40 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MediMind</title>
     <link rel="stylesheet" href="login.css">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet';>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
+
     <div class="main">
-        <div class="title">
-            <h2>MEDIMIND</h2>
-            <h3>Never forget your medication again</h3>
-            <h4>Login</h4>
+        <form action="">
+            <h1>
+                Login
+            </h1>
+        <div class="input_box">
+            <label for="uname"><b>Username:</b></label>
+            <input type="text" name="uname" placeholder="Username" required>
+            <i class='bx bxs-user'></i>
         </div>
-        <br> <br> <br> <br> <br> <br> <br> <br>
-
-        <dic class="form">
-            <form name ="login_page" method="post">
-                <div class="container">
-                  <label for="uname"><b>Username</b></label>
-                  <input type="text" placeholder="Enter Username" name="uname" required>
-                  <br><br>
-              
-                  <label for="psw"><b>Password</b></label>
-                  <input type="password" placeholder="Enter Password" name="psw" required>
-                  <br><br>
-              
-                  <input type="submit" value="Login" name="sub_btn">
-                  
-                
-              
+        <div class="input_box">
+            <label for="psw"><b>Password:</b></label>   
+            <input type="password" name="uname" placeholder="Password" required>
+            <i class='bx bxs-lock-alt' ></i>
             
-                  <button type="button" class="cancelbtn">Cancel</button>
+        </div>   
+        <button type="submit" id="btn"><a href="#">Login</a></button>  
+        </form>
 
-                </div>
-              </form>
-              
-              
-        </dic>
+
     </div>
+    
 
 
 
