@@ -1,140 +1,133 @@
-*{
-    margin: 0;
-    padding: 0;
+.ribbon{
+    width: 100%;
+    height: 20%;
+    display: grid;
+    background-color: #c1c9cf;
+    grid-template-columns: min-content auto;
+    font-family: "Poppins";
 }
 
-.main{
-    width: 100%;
-    height: 109vh;
-    background: linear-gradient(to right, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%),url(background.jpg);
-    background-size: cover;
+.ribbon h2{
+    grid-column: 1;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-left: 30px;
+    margin-right: 50px;
+    position: relative;
+    left: 10%;
+}
+
+.ribbon ul{
+    grid-column: 2;
+    align-self: center;
+    align-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 15%;
+}
+
+.ribbon ul li{
+    list-style: none;
+    margin-left: 20%;
     
 }
-.logo{
-    width: 200px;
-    height: 70px;
-    float: left;
-    color: #FF7F00;
-    font-size: 40px;
-    font-family: Arial;
-    padding-left: 40px;
-    padding-top: 40px;
-}
 
-.menu{
-    width: 400px;
-    float: left;
-    height: 70px;
-}
-
-ul{
-    float: left;
-    justify-content: center;
-    display: flex;
-    margin-left: 180px;
-}
-
-ul li{
-    list-style: none;
-    font-size: 15px;
-    margin-left: 120px;
-    margin-top: 40px;
-
-}
-
-ul li a{
+.ribbon ul li a{
     text-decoration: none;
-    font-family: Arial;
-    font-weight: bold;
-    color: white;
-}
-ul li a:hover{
-    color: orange;
+    color: black;
+    font-family: "poppins";
+    
 }
 
-.menu .lg{
-    width: 160px;
-    height: 40px;
-    background-color: black;
+.ribbon ul li a:hover{
+    color: rgb(113, 42, 151);
+}
+
+.ribbon button{
+    grid-column: 3;
+    background: black;
     border: none;
-    font-size: 20px;
-    border-radius: 10px;
+    border-radius: 50px;
+    font-size: medium;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 20%;
+    height: 50%;
     position: relative;
-    left: 1000px;
-    bottom: 40px;
-
-
+    left: 60%;
+    top: 25%;
 }
-.menu .lg a{
+
+.ribbon button a{
     text-decoration: none;
-    color: white;
+    color: aliceblue;
     transition: .5s;
 }
 
-
+.ribbon button a:hover{
+    color: rgb(113, 42, 151);
+}
 .content{
-    width: 1200px;
-    height: auto;
-    margin: auto;
-    color: black;
-    align-self: center;
+    display: grid;
+    grid-template-columns: 30% auto;
+    justify-content: center;
+    align-items: center;
+    font-style: "poppins";
     position: relative;
-    top: 170px;
-    right: 200px;
-    line-height: 2px;
-    
+    margin-top: 2%;
 }
 .content h3{
-    font-family: Arial;
-    color: aliceblue;
     position: relative;
-    left: 90px;
-
+    left: 20%;
+    top: 40%;
+    font-size: small;
+}
+.content p{
+    grid-column: 1;
+    grid-row: 2;
+    font-size:40px ;
+    position: relative;
+    position: relative;
+    left: 17%;   
 }
 
-.content p{
-    font-family: 'Times New Roman';
-    font-size: 50px;
-    letter-spacing: 2px;
-    color: aliceblue;
+.content p2{
+    grid-column: 1;
+    grid-row: 3;
+    position: relative;
+    left: 40%;
+    bottom: 60%;
+
+    font-size: 40px;
+    background: linear-gradient(to right, #ef5350, #f48fb1, #7e57c2, #2196f3, #26c6da, #43a047, #eeff41, #f9a825, #ff5722);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .content p1{
-    font-family: 'Times New Roman';
-    font-size: 50px;
-    letter-spacing: 1.5px;
+    grid-column: 1;
+    grid-row: 3;
+    font-size: 40px;
     position: relative;
-    left: 520px;
-    background: linear-gradient(45deg, #FF0000, #FF7F00, #FFFF00, #00FF00, #0000FF, #4B0082, #8B00FF);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    bottom: 60%;
+   
+
+}
+.content img{
+    grid-column: 1;
+    grid-row: 4;
     
-
-}   
-
-.dashboard {
-    align-items: center;
     position: relative;
-    top: 250px;
-    left: 380px;
-    
+    right: 15%;
 }
 
-.dashboard .db{
-    width: 800px;
-    height: 100px;
-    background-color:black;
-    border: none;
-    font-size: 50PX;
-    border-radius: 30px;
-}
-    
-.dashboard .db a{
-    text-decoration: none;
-    color: white;
-    transition: .5s;
 
-}
+
+
 
 
 
