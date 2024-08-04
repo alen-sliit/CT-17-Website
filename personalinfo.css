@@ -10,13 +10,16 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    background: url(loginbackground.png);
+    background-size: cover;
+    background-position: center;
 }
 
 .main{
     width: 700px;
     background: transparent;
     border: 5px solid black;
-    background-color: rgb(22, 21, 21);
+    background-color: white;
     border-radius: 80px;  
      
 }  
@@ -24,19 +27,21 @@ body{
 
 .main h1{
     font-size: 36px;
-    color: white;
+    color: black;
     text-align: center;
-    background: linear-gradient(to right, #f48fb1, #7e57c2, #2196f3, #26c6da);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    
     
 }
 
 .main h3{
     font-size: 36px;
     color: white;
-    text-align: center;  
+    text-align: center; 
+    background: linear-gradient(to right, #f48fb1, #7e57c2, #2196f3, #26c6da);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
 }
+
 .main .input_box{
     width: 100%;
     height: 50px;
@@ -46,7 +51,7 @@ body{
 
 .input_box label{
     grid-column: 1;
-    color: white;
+    color: black;
     font-size: 16px;
     padding-left: 10%;
     padding-right: 0%;
@@ -59,10 +64,10 @@ body{
     background: transparent;
     border: none;
     outline: none;
-    border: 2px solid white;
+    border: 2px solid black;
     border-radius: 40px;
     font-size: 16px;
-    color: white;
+    color:black;
     text-align: justify;
     position: relative;
     right: 30%;
@@ -76,14 +81,17 @@ body{
 
 
 .input_box ::placeholder{
-    color: white;
+    color: black;
+    position: relative;
+    left: 2%;
+    cursor:row-resize;
 }
 
 
 .main #btn{
     width: 40%;
     height: 45px;
-    background: white;
+    background: black;
     border: none;
     outline: none;
     border-radius: 40px;
@@ -96,7 +104,7 @@ body{
 
 .main #btn a{
     text-decoration: none;
-    color: black;
+    color: white;
     transition: .5s;
 }
 
@@ -105,8 +113,32 @@ body{
 }
 
 .terms{
-    color: white;
+    color:black;
     accent-color: white;
     padding-left: 4%;
     padding-bottom: 3%;
+}
+
+@media screen and (max-width: 700px) {
+    .main{
+        width: 100%;
+    }
+    .input_box input{
+        position: relative;
+        left:-30%;
+    } 
+}
+
+@media screen and (max-width: 600px) {
+    .main{
+        width: 100%;
+    }
+    .input_box input{
+        position: relative;
+        left:-20%;
+        width: 100%;
+    } 
+    .input_box input[name=phnum]{
+        width: 100%;
+    }
 }
