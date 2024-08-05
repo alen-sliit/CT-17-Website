@@ -9,16 +9,18 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    height: 100vh;
     background: url(loginbackground.png);
     background-size: cover;
     background-position: center;
+   
 }
 
 .main{
     width: 700px;
+    height: 720px;
     background: transparent;
-    border: 5px solid black;
+    border: 5px solid gray;
     background-color: white;
     border-radius: 80px;  
      
@@ -60,6 +62,7 @@ body{
 .input_box input{
     width: 120%;
     height: 100%;
+    padding-left: 10px;
     grid-column: 2;
     background: transparent;
     border: none;
@@ -75,20 +78,21 @@ body{
 
 .input_box input[name=phnum]{
     position: relative;
-    right: 38%;
-    width: 128%;
+    left: -28%;
+  
+    width: 119%;
 }
 
 
 .input_box ::placeholder{
     color: black;
     position: relative;
-    left: 2%;
+    left: 1%;
     cursor:row-resize;
 }
 
 
-.main #btn{
+#btn{
     width: 40%;
     height: 45px;
     background: black;
@@ -140,5 +144,36 @@ body{
     } 
     .input_box input[name=phnum]{
         width: 100%;
+        left: -18%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .main{
+        width: 100%;
+    }
+    .input_box input{
+        position: relative;
+        left:-15%;
+        width: 100%;
+    } 
+    .input_box input[name=phnum]{
+        width: 100%;
+        left: -13%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .main{
+        width: 100%;
+    }
+    .input_box input{
+        position: relative;
+        left:-1%;
+        width: 100%;
+    } 
+    .input_box input[name=phnum]{
+        width: 95%;
+        left: 4%;
     }
 }

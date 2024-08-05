@@ -44,7 +44,6 @@ body{
 
 .main h1{
     font-size: 36px;
-    color: black;
     text-align: center;
     position: relative;
     right: 3%;    
@@ -55,7 +54,7 @@ body{
     height: 50px;
     margin: 40px 0;
     display: grid;
-    position:relative ;
+    position: relative;
 }
 
 .input_box label{
@@ -66,8 +65,8 @@ body{
 .input_box input{
     width: 120%;
     height: 100%;
+    padding-left: 10px;
     grid-column: 2;
-    background: transparent;
     border: none;
     outline: none;
     border: 2px solid black;
@@ -82,7 +81,7 @@ body{
 .input_box ::placeholder{
     color: black;
     position: relative;
-    left: 2%;
+    left: 1%;
 }
 
 .input_box i{
