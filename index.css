@@ -12,8 +12,6 @@ body{
 }
 #left{
     grid-column: 1;
-    align-self: center;
-    align-content: center;
     margin-left: 30px;
     margin-right: 50px;
     grid-template-columns: min-content auto;
