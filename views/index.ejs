@@ -1,0 +1,111 @@
+<% let currentDate = new Date().toJSON().slice(0, 10);%>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediMind</title>
+    <link rel="stylesheet" href="index.css">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet';>
+</head>
+<body><div id="left">
+    <div id="user-details">
+        <br><br>
+        <img src="./images/Avatar.png" alt="user-image"><br>
+        <% if (locals.userName){ %>
+            <label id="user-name"><%= userName %></label>
+            <label id="email"><%= userEmail %></label><br>
+        <% }else{%>
+            <label id="user-name">SLIIT</label>
+            <label id="email">sliit@gmail.com</label><br>
+        <% } %>
+    </div>
+    <div id = "tabs">
+        <ul>
+            <li><a href="/">Dashboard</a></li>
+            <li><a href="personalinfo.html">Personal info</a></li>
+        </ul>
+    </div>
+</div>
+<div id="content">
+    <div id="date">
+        <br>
+        <label id="h3"><%= currentDate%></label>
+    </div>
+    <div id="configTime">
+        <div id="h1">
+            <label>Setup</label>
+        </div>
+        <div id="inputPart">
+            <form action="/saveData" method="post" id="myForm">
+            <br>
+                <div id="configLeft">
+                    <select class="h4" name="medi-name" id="selector">
+                        <% for (i = 0; i < 8; i++){%>
+                            <option value="<%= i + 1 %>">Medicine <%= i + 1 %></option>
+                        <% } %>
+                    </select>
+                    <br><br>
+                    <input type="radio" id="before" name="meal-mom" value="Before">
+                    <label class="options">Before</label>
+                    <input type="radio" id="after" name="meal-mom" value="After">
+                    <label class="options">After <span>Meal</span></label>
+                    <br>
+                </div>
+                <div id="configRight">
+                    <input type="time" id="reminder-time" name="reminder-time" required><br>
+                    <br>
+                    <input type="button" value="Reset" id="remMedi">
+                    <input type="submit" value="Save">
+                    <br><br>
+                </form>
+            </div>  
+        </div>
+            
+        
+            
+        </form> </div>
+        <div id="monitor-part">
+            <h1 id="date">Today Pills</h1>
+            <hr>
+            <ul id="medi-list">
+            <% for (i = 0; i < addedMedi.length; i++) {%>
+                <li>
+                <div class="Medicine-status">
+                    <img src="./images/red-dot.png" alt="status A">
+                    <div>
+                        <label class="medi-name">Medicine <%= addedMedi[i] %></label>
+                        <label class="time"><%=mediInfo[addedMedi[i]]["medicineStatus"]%></label>
+                        <label class="meal-mom"><%=mediInfo[addedMedi[i]]["medicineMom"]%></label>
+                        <label class="status"><%=mediInfo[addedMedi[i]]["medicineTime"]%></label>
+                    </div><br><br>
+                </div>
+                </li><% } %>
+            </ul> 
+            <br><br>
+            </div>    
+        
+        </div> 
+</div>
+</div>
+
+
+
+<script>
+    document.getElementById('remMedi').addEventListener('click', () => {
+            fetch('/remTime', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({data:document.getElementById('selector').value})})
+                location.reload(true); 
+    });
+       
+</script>
+
+      
+
+</body>
+</html>

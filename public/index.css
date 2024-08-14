@@ -1,0 +1,207 @@
+a { 
+    color: inherit; 
+    text-decoration: none;
+} 
+body{
+    background-color: #101010;
+    display: grid;
+    grid-template-columns: min-content auto;
+    font-family: Poppins;
+    color: white;
+    position: relative;
+}
+#left{
+    grid-column: 1;
+    margin-left: 30px;
+    margin-right: 50px;
+    grid-template-columns: min-content auto;
+}
+#content{
+    grid-column: 2;
+    background-color: #FFFFFF;
+    color: #262A41;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 35% auto; 
+}
+#user-details > img{
+    height: 72px;
+    width: 72px;
+    border-radius: 50%;
+}
+#user-details{
+    font-family: Poppins;
+}
+#user-name{
+    font-size: 30px;
+}
+#email{
+    opacity: 50%;
+    font-size: 17px;
+}
+#tabs{
+    font-size: 25px;
+    line-height: 50px;
+}
+ul{
+    list-style: none;
+    padding-left: 10px;
+}
+#content > *{
+    margin-left: 50px;
+}
+#h1{
+    font-size: 40px;
+    font-weight: 50%;
+    grid-column: 1;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+}
+h2{
+    font-size: 16px;
+}
+#h3{
+    font-size: 20px;
+}
+.h4{
+    font-size: 15px;
+}
+.options{
+    opacity: 0.7;
+}
+span{
+    color: black;
+    font-weight: bold;
+}
+input[type=submit],input[type=button]{
+    font-family: Poppins;
+    background-color: #FFFFFF;
+    border-color: #262A41;
+    border-radius: 5px;
+}
+input[type=radio]{
+    margin: 0;
+}
+#date{
+    grid-column: span 2;
+}
+#adding-part{
+    grid-column: 1;
+    grid-row: 1;
+}
+#configTime{
+    grid-column: span 2;
+    grid-row: 2;
+    display: grid;
+    border:1px solid gray;
+    width: 80%;
+    padding-left: 30px;
+}
+#monitor-part{
+    grid-column: span 2;
+    grid-row: 3;
+}
+#inputPart{
+    grid-column: 2;
+}
+
+.Medicine-status > img{
+    height: 48px;
+    grid-column-start: 1;
+    border-radius: 50%;
+    padding: 5px;
+}
+.Medicine-status{
+    display: grid;
+    grid-template-columns: min-content auto;
+}
+.Medicine-status > div{
+    height: 48px;
+    grid-column-start: 2;
+    display: grid;
+}
+.medi-name{
+    grid-column: 1;
+    grid-row: 1;
+}
+.time{
+    grid-column: 2;
+    grid-row: 1;
+}
+.meal-mom{
+    grid-column: 1;
+    grid-row: 2;
+}
+.status{
+    grid-column: 2;
+    grid-row: 2;
+}
+.time, .status{
+    text-align: right   ;
+}
+.Medicine-status > div > *{
+        padding-left: 10px;
+}
+
+#medi-name-A,#medi-name-B,#medi-name-C{
+    font-weight: bold;
+}
+#status-A{
+    color: red;
+}
+#status-B{
+    color: green;
+}
+#status-C{
+    color: yellow;
+}
+
+#tabs > ul > li {
+    text-decoration: none;
+    padding: 10px;
+    transition: color 0.3s ease-in-out;
+}
+
+#tabs > ul > li:hover {
+    color: gray; /* Color changes to red on hover */
+}  
+#inputPart > form{
+    display: grid;
+}
+#configLeft{
+    grid-column: 1;
+} 
+#medi-list{
+    display: flex;
+    flex-wrap: wrap;
+}
+#configRight{
+    grid-column: 2;
+}
+/* #medi-list{
+
+
+}  */
+
+@media screen and (max-width: 580px) {
+    #inputPart{
+        grid-column: 1;
+    }
+
+}
+@media screen and (max-width: 850px) {
+    #content{
+        grid-column: 1;}
+    body{
+        grid-template-columns: auto;
+    }
+    #tabs > ul{
+        display: flex;
+        font-size: 15px;
+        gap: 5px;
+    }
+}
+    
+ 
+

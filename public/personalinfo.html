@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediMind</title>
+    <link rel="stylesheet" href="personalinfo.css">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet';>
+</head>
+<body>
+
+    <div class="main">
+        <form name="personal" method="post" action="/userData">
+            <h1>MEDIMIND</h1>
+            <h3>Personal Information</h3>
+        <div class="input_box">
+            <label for="fname"><b>First name:</b></label>
+            <input type="text" name="fname" placeholder="&emsp; Eg:-Anuda" required maxlength="100" size="20"> 
+        </div>
+        <div class="input_box">
+            <label for="lname"><b>Last name:</b></label>   
+            <input type="text" name="lname" placeholder="&emsp; Eg:-Ranasinghe" required maxlength="100" size="20">
+        </div>   
+        <div class="input_box">
+            <label for="email"><b>Email:&emsp;&emsp;</b></label>
+            <input type="email" name="email" placeholder="&emsp; Eg:-1234@gmail.com" required maxlength="100" size="20"> 
+
+        </div>
+        <div class="input_box">
+            <label for="phnum"><b>Phone Number:</b></label>
+            <input type="text" name="phnum" placeholder="&emsp; Eg:-0757638745" required maxlength="100" size="20"> 
+        </div>
+        <div class="input_box">
+            <label for="address"><b>Address:&nbsp&nbsp&nbsp</b></label>
+            <input type="text" name="address" placeholder="&emsp; Eg:- SLIIT Malabe Campus, New Kandy Road, Malabe" maxlength="100" size="20"> 
+        </div>
+        
+        <button type="submit" id="btn">Save Info</a></button>  
+        </form>
+
+
+    </div>
+    
