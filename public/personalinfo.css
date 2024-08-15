@@ -7,36 +7,89 @@
 
 body{
     display: flex;
+    display: grid;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    height: 100vh;
+    background-color: black;
+}
+#left{
+    grid-column: 1;
+    position: relative;
+    bottom: 220px;
+    right: 160%;
+    font-family: Poppins;
+    color: white;
+    grid-template-columns: min-content auto;
+}
+
+#user-details > img{
+    height: 72px;
+    width: 72px;
+    border-radius: 50%;
+}
+#user-details{
+    font-family: Poppins;
+}
+#user-name{
+    font-size: 30px;
+}
+#email{
+    opacity: 50%;
+    font-size: 17px;
+}
+#tabs{
+    font-size: 25px;
+    line-height: 50px;
+    padding-top: 50px;
+}
+#tabs ul{
+    list-style: none;
+}
+#tabs ul a{
+    list-style: none;
+    
+    text-decoration: none;
+    color: white;
+    position: relative;
+    top: 70%;
+}
+#tabs ul a:hover{
+    color: #26c6da;
 }
 
 .main{
     width: 700px;
+    height: 720px;
+    grid-column: 2;
+    grid-template-columns: min-content auto;
     background: transparent;
-    border: 5px solid black;
-    background-color: rgb(22, 21, 21);
-    border-radius: 80px;  
-     
+    border: 5px solid gray;
+    background-color: white;
+    border-radius: 80px; 
+    justify-content: center;
+    position: relative;
+    right: 25%;
+    
 }  
-
 
 .main h1{
     font-size: 36px;
-    color: white;
+    color: black;
     text-align: center;
-    background: linear-gradient(to right, #f48fb1, #7e57c2, #2196f3, #26c6da);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    
     
 }
 
 .main h3{
     font-size: 36px;
     color: white;
-    text-align: center;  
+    text-align: center; 
+    background: linear-gradient(to right, #f48fb1, #7e57c2, #2196f3, #26c6da);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
 }
+
 .main .input_box{
     width: 100%;
     height: 50px;
@@ -46,7 +99,7 @@ body{
 
 .input_box label{
     grid-column: 1;
-    color: white;
+    color: black;
     font-size: 16px;
     padding-left: 10%;
     padding-right: 0%;
@@ -55,14 +108,15 @@ body{
 .input_box input{
     width: 120%;
     height: 100%;
+    padding-left: 10px;
     grid-column: 2;
     background: transparent;
     border: none;
     outline: none;
-    border: 2px solid white;
+    border: 2px solid black;
     border-radius: 40px;
     font-size: 16px;
-    color: white;
+    color:black;
     text-align: justify;
     position: relative;
     right: 30%;
@@ -70,20 +124,30 @@ body{
 
 .input_box input[name=phnum]{
     position: relative;
-    right: 38%;
-    width: 128%;
+    left: -28%;
+  
+    width: 119%;
+}
+
+.input_box input[name=email]{
+    position: relative;
+    left: -25%;
+    width: 115%;
 }
 
 
 .input_box ::placeholder{
-    color: white;
+    color: black;
+    position: relative;
+    left: 0.5%;
+    cursor:row-resize;
 }
 
 
-.main #btn{
+#btn{
     width: 40%;
     height: 45px;
-    background: white;
+    background: black;
     border: none;
     outline: none;
     border-radius: 40px;
@@ -96,7 +160,7 @@ body{
 
 .main #btn a{
     text-decoration: none;
-    color: black;
+    color: white;
     transition: .5s;
 }
 
@@ -105,8 +169,63 @@ body{
 }
 
 .terms{
-    color: white;
+    color:black;
     accent-color: white;
     padding-left: 4%;
     padding-bottom: 3%;
+}
+
+@media screen and (max-width: 700px) {
+    .main{
+        width: 100%;
+    }
+    .input_box input{
+        position: relative;
+        left:-30%;
+    } 
+}
+
+@media screen and (max-width: 600px) {
+    .main{
+        width: 100%;
+    }
+    .input_box input{
+        position: relative;
+        left:-20%;
+        width: 100%;
+    } 
+    .input_box input[name=phnum]{
+        width: 100%;
+        left: -18%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .main{
+        width: 100%;
+    }
+    .input_box input{
+        position: relative;
+        left:-15%;
+        width: 100%;
+    } 
+    .input_box input[name=phnum]{
+        width: 100%;
+        left: -13%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .main{
+        width: 100%;
+    }
+    .input_box input{
+        position: relative;
+        left:-1%;
+        width: 100%;
+    } 
+    .input_box input[name=phnum]{
+        width: 95%;
+        left: 4%;
+    }
 }
