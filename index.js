@@ -5,8 +5,8 @@ const app = express();
 const port = 3000;
 
 var NumofMed = 8;
-var userName = null; 
-var userEmail = null;
+var userName = "SLIIT"; 
+var userEmail = "sliit@gmail.com";
 var addedMedi = [];
 var mediInfo = {"1":
                    {"medicineStatus":"pending",
@@ -66,7 +66,6 @@ function dashboardRen(res){
 }
 
 app.get("/", (req, res) => {
-  res.header("Refresh", "5");
   dashboardRen(res);
 });
 
