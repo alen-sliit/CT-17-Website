@@ -1,8 +1,12 @@
 import bodyParser from "body-parser";
 import express from "express";
+import { createServer } from "http";
+import { Server } from "socket.io";
 
-const app = express();
 const port = 3000;
+const app = express();
+const httpServer = createServer(app);
+const io = new Server(httpServer, { /* options */ });
 
 var NumofMed = 8;
 var userName = "SLIIT"; 
@@ -65,6 +69,10 @@ function dashboardRen(res){
   });
 }
 
+io.on('connection', (socket) => {
+  // console.log('a user connected');
+});
+
 app.get("/", (req, res) => {
   dashboardRen(res);
 });
@@ -81,7 +89,8 @@ app.post("/saveData", (req, res,) => {
     addedMedi.push(req.body["medi-name"]);
     mediInfo[req.body["medi-name"]]["medicineMom"]=req.body["meal-mom"];
   }
-  mediInfo[req.body["medi-name"]]["medicineTime"]=req.body["reminder-time"]
+  mediInfo[req.body["medi-name"]]["medicineStatus"]="pending";
+  mediInfo[req.body["medi-name"]]["medicineTime"]=req.body["reminder-time"];
   res.redirect("/");
 });
 
@@ -106,15 +115,18 @@ app.get("/espGet", (req, res) => {
 });
 
 app.post("/espPost", (req, res) => {
-  for (let i = 0; i < Object.values(req.body).length; i++){
-    mediInfo[Object.keys(req.body)[i]]["medicineStatus"] = Object.values(req.body)[i];
-  }
+  // for (let i = 0; i < Object.values(req.body).length; i++){
+  //   mediInfo[Object.keys(req.body)[0]]["medicineStatus"] = Object.values(req.body)[0];
+  // }
+  mediInfo[Object.keys(req.body)[0]]["medicineStatus"] = Object.values(req.body)[0];
   res.status(200).json({ message: "Received Data" });
+  io.emit('force-refresh');
 });
 
-app.listen(port, () => {
-  console.log(`Server started on port ${port}`);
-});
+
+httpServer.listen(3000, () => {
+    console.log(`Server started on port ${port}`);
+  });
 
 
 

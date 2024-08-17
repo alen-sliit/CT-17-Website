@@ -108,7 +108,7 @@
 </div>
 
 
-
+<script src="/socket.io/socket.io.js"></script>
 <script>
     document.getElementById('remMedi').addEventListener('click', () => {
             fetch('/remTime', {
@@ -119,6 +119,12 @@
                 body: JSON.stringify({data:document.getElementById('selector').value})})
                 location.reload(true); 
     });
+    const socket = io();
+
+    socket.on('force-refresh', () => {
+        console.log('Force refresh event received');
+        window.location.reload(); // Trigger the page reload
+      });
        
 </script>
 
