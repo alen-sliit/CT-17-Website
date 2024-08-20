@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,36 +9,59 @@
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet';>
 </head>
 <body>
+    <div id="left">
+        <div id="user-details">
+            <br><br>
+            <img src="./images/Avatar.png" alt="user-image"><br>
+                <label id="user-name">SLIIT</label><br>
+                <label id="email">sliit@gmail.com</label><br>
+        </div>
+        <div id = "tabs">
+            <ul>
+                <li><a href="/">Dashboard</a></li>
+                <li><a href="personalinfo.html">Personal info</a></li>
+            </ul>
+        </div>
+    </div>
 
     <div class="main">
-        <form name="personal" method="post" action="/userData">
-            <h1>MEDIMIND</h1>
-            <h3>Personal Information</h3>
+        
+        <form name="personal" method="post" action="">
+            <h1>
+                MEDIMIND
+            </h1>
+            <h3>
+                Personal Information
+            </h3>
         <div class="input_box">
             <label for="fname"><b>First name:</b></label>
-            <input type="text" name="fname" placeholder="&emsp; Eg:-Anuda" required maxlength="100" size="20"> 
+            <input type="text" name="fname" placeholder="Eg:-Anuda"  maxlength="100" size="20" required/> 
         </div>
         <div class="input_box">
             <label for="lname"><b>Last name:</b></label>   
-            <input type="text" name="lname" placeholder="&emsp; Eg:-Ranasinghe" required maxlength="100" size="20">
+            <input type="text" name="lname" placeholder="Eg:-Ranasinghe"  maxlength="100" size="20" required/>
         </div>   
         <div class="input_box">
-            <label for="email"><b>Email:&emsp;&emsp;</b></label>
-            <input type="email" name="email" placeholder="&emsp; Eg:-1234@gmail.com" required maxlength="100" size="20"> 
+            <label for="email"><b>Email:</b></label>
+            <input type="email" name="email" placeholder="Eg:-1234@gmail.com"  maxlength="100" size="20" required/> 
 
         </div>
         <div class="input_box">
-            <label for="phnum"><b>Phone Number:</b></label>
-            <input type="text" name="phnum" placeholder="&emsp; Eg:-0757638745" required maxlength="100" size="20"> 
+            <label for="phnum"><b>Number:</b></label>
+            <input type="number" name="phnum" placeholder="Eg:-0757638745"  maxlength="100" size="20" required/> 
         </div>
         <div class="input_box">
-            <label for="address"><b>Address:&nbsp&nbsp&nbsp</b></label>
-            <input type="text" name="address" placeholder="&emsp; Eg:- SLIIT Malabe Campus, New Kandy Road, Malabe" maxlength="100" size="20"> 
+            <label for="address"><b>Address:</b></label>
+            <input type="text" name="address" placeholder="Eg:- SLIIT Malabe Campus, New Kandy Road, Malabe" maxlength="100" size="20" required/> 
         </div>
-        
-        <button type="submit" id="btn">Save Info</a></button>  
+        <div class="terms">
+            <input type="checkbox" name="terms" value="terms"> I agree to the Terms and Privacy policy
+        </div>
+        <button type="submit" id="btn"><a href="index.html">Create account</a></button>  
         </form>
 
-
     </div>
+</body>
+</html>    
+
     
