@@ -13,13 +13,10 @@
     <div id="user-details">
         <br><br>
         <img src="./images/Avatar.png" alt="user-image"><br>
-        <% if (locals.userName){ %>
-            <label id="user-name"><%= userName %></label>
-            <label id="email"><%= userEmail %></label><br>
-        <% }else{%>
-            <label id="user-name">SLIIT</label>
-            <label id="email">sliit@gmail.com</label><br>
-        <% } %>
+         
+        <label id="user-name"><%= userName %></label>
+        <label id="email"><%= userEmail %></label><br>
+            
     </div>
     <div id = "tabs">
         <ul>
@@ -47,14 +44,14 @@
                         <% } %>
                     </select>
                     <br><br>
-                    <input type="radio" id="before" name="meal-mom" value="Before">
+                    <input type="radio" name="meal-mom" value="Before">
                     <label class="options">Before</label>
-                    <input type="radio" id="after" name="meal-mom" value="After">
+                    <input type="radio" name="meal-mom" value="After">
                     <label class="options">After <span>Meal</span></label>
                     <br>
                 </div>
                 <div id="configRight">
-                    <input type="time" id="reminder-time" name="reminder-time" required><br>
+                    <input type="time" name="reminder-time" required><br>
                     <br>
                     <input type="button" value="Reset" id="remMedi">
                     <input type="submit" value="Save">
@@ -62,9 +59,7 @@
                 </form>
             </div>  
         </div>
-            
-        
-            
+    
         </form> </div>
         <div id="monitor-part">
             <h1 id="date">Today Pills</h1>
@@ -73,13 +68,34 @@
             <% for (i = 0; i < addedMedi.length; i++) {%>
                 <li>
                 <div class="Medicine-status">
-                    <img src="./images/red-dot.png" alt="status A">
-                    <div>
-                        <label class="medi-name">Medicine <%= addedMedi[i] %></label>
-                        <label class="time"><%=mediInfo[addedMedi[i]]["medicineStatus"]%></label>
-                        <label class="meal-mom"><%=mediInfo[addedMedi[i]]["medicineMom"]%></label>
-                        <label class="status"><%=mediInfo[addedMedi[i]]["medicineTime"]%></label>
-                    </div><br><br>
+                    <% let medicineStatus = mediInfo[addedMedi[i]]["medicineStatus"]; %>
+
+                    <% if (medicineStatus == "pending") {%>
+                        <img src="./images/yellow-dot .png" alt="status A">
+                        <div>
+                            <label class="medi-name">Medicine <%= addedMedi[i] %></label>
+                            <label style="color: #9b870c;" class="time"><%=medicineStatus%></label>
+                            <label class="meal-mom"><%=mediInfo[addedMedi[i]]["medicineMom"]%></label>
+                            <label class="status"><%=mediInfo[addedMedi[i]]["medicineTime"]%></label>
+                        </div>
+                    <% } else if (medicineStatus == "missed"){%>
+                        <img src="./images/red-dot.png" alt="status A">
+                        <div>
+                            <label class="medi-name">Medicine <%= addedMedi[i] %></label>
+                            <label style="color: red;" class="time"><%=medicineStatus%></label>
+                            <label class="meal-mom"><%=mediInfo[addedMedi[i]]["medicineMom"]%></label>
+                            <label class="status"><%=mediInfo[addedMedi[i]]["medicineTime"]%></label> 
+                        </div>
+                    <% }else{ %>
+                        <img src="./images/green-dot.png" alt="status A">
+                        <div>
+                            <label class="medi-name">Medicine <%= addedMedi[i] %></label>
+                            <label style="color: green;" class="time"><%=medicineStatus%></label>
+                            <label class="meal-mom"><%=mediInfo[addedMedi[i]]["medicineMom"]%></label>
+                            <label class="status"><%=mediInfo[addedMedi[i]]["medicineTime"]%></label>
+                        </div>
+                    <% } %>
+                    <br><br>
                 </div>
                 </li><% } %>
             </ul> 
@@ -91,7 +107,7 @@
 </div>
 
 
-
+<script src="/socket.io/socket.io.js"></script>
 <script>
     document.getElementById('remMedi').addEventListener('click', () => {
             fetch('/remTime', {
@@ -102,6 +118,12 @@
                 body: JSON.stringify({data:document.getElementById('selector').value})})
                 location.reload(true); 
     });
+    const socket = io();
+
+    socket.on('force-refresh', () => {
+        console.log('Force refresh event received');
+        window.location.reload(); // Trigger the page reload
+      });
        
 </script>
 

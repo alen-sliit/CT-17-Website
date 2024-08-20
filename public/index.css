@@ -29,9 +29,6 @@ body{
     width: 72px;
     border-radius: 50%;
 }
-#user-details{
-    font-family: Poppins;
-}
 #user-name{
     font-size: 30px;
 }
@@ -48,7 +45,7 @@ ul{
     padding-left: 10px;
 }
 #content > *{
-    margin-left: 50px;
+    margin-left: 5%;
 }
 #h1{
     font-size: 40px;
@@ -96,7 +93,8 @@ input[type=radio]{
     display: grid;
     border:1px solid gray;
     width: 80%;
-    padding-left: 30px;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 #monitor-part{
     grid-column: span 2;
@@ -138,23 +136,10 @@ input[type=radio]{
     grid-row: 2;
 }
 .time, .status{
-    text-align: right   ;
+    text-align: right;
 }
 .Medicine-status > div > *{
         padding-left: 10px;
-}
-
-#medi-name-A,#medi-name-B,#medi-name-C{
-    font-weight: bold;
-}
-#status-A{
-    color: red;
-}
-#status-B{
-    color: green;
-}
-#status-C{
-    color: yellow;
 }
 
 #tabs > ul > li {
@@ -179,10 +164,6 @@ input[type=radio]{
 #configRight{
     grid-column: 2;
 }
-/* #medi-list{
-
-
-}  */
 
 @media screen and (max-width: 580px) {
     #inputPart{
