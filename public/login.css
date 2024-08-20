@@ -11,7 +11,13 @@ body{
     width: 100%;
     min-height: 100vh;
     display: grid;
+<<<<<<< HEAD:public/login.css
     background-color: black;
+=======
+    background: url(loginbackground.png);
+    background-position: center;
+    background-size: cover;
+>>>>>>> fae65e115af5e914c513b4f0af8b72adf14bb6ce:login.css
 }  
    
 
